@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="images/coffebeans.png" rel="icon"/>
+    <title>Tracker</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+</head>
+  <body style="padding-top: 70px">
+<div class="container-fluid">
+  <div class="container">
+	  
+	  	  
+<!--navigation bar-->  
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Tracker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Explore</a> </li>
+		  <li class="nav-item"> <a class="nav-link" href="#">Why Us</a> </li>	
+		  <li class="nav-item"> <a class="nav-link" href="#">About Us</a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Occupation </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+				<p class="text-center">Select Occupation</p>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Mechanic</a> <a class="dropdown-item" href="#">Electrician</a>
+              
+            </div>
+          </li>
+        </ul>
+		  
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+		  <a href="form_original.html">
+		  <button type="button" class="btn btn-primary">sign in</button></a>      
+	  </div>
+    </nav>
+	  
+	 	  
+<!--section 1 start(heading)-->
+<section class="back img-fluid rounded">
+	  <h3 class="col-lg-10 offset-lg-1">Welcome to our Website</h3>
+		  <table border="0" class="img-fluid rounded">
+		  <tr height="500px">
+			  <td width="400px"><img src="images/cake.png" class="img-fluid rounded imgsize" alt="Placeholder image"></td>
+			  <td><h3 class="text-center">Hello</h3>			    
+		    <p class="text-right">A good example of a paragraph contains a topic sentence, details and a conclusion. 'There are many different kinds of animals that live in China. Tigers and leopards are animals that live in China's forests in the north. In the jungles, monkeys swing in the trees and elephants walk through the brush.</p><br>
+			  <p class="text-right">
+			    <button type="button" class="btn btn-primary hello" onClick="openPopup()">Get Started</button></p>	  
+		    </td>
+		    </tr>
+		  </table>
+    </section><br>
+	  
+	  
+<!--popup window(for location)-->	  
+<div class="popup img-fluid rounded" id="popup">
+        <div class="popup-content">
+			<div class="popup-left">
+<div class="left-content">
+            <h6 class="pophd text-left text-capitalize">
+                <strong>Select city or division</strong>
+            </h6>
+            <div class="table-container">
+        <div class="table-row log">
+            <a href="#"><h6>All of Sri Lanka</h6></a>
+            
+        </div><hr>
+        <div class="table-row">
+            <h6>Districts</h6>
+        </div>
+        <div class="table-row">
+            <a href="#" onclick="openCRightPopup()">
+                <h6>Colombo <img class="log" src="images/grater_than_icon.png" alt="img"></h6>
+            </a>
+            
+        </div><hr>
+        <div class="table-row">
+            <a href="#" onclick="openKRightPopup()">
+                <h6>Kandy <img class="log" src="images/grater_than_icon.png" alt="img"></h6>
+            </a>
+            
+        </div><hr>
+				<button type="button" onclick="closePopup()">ok</button><br>
+    </div>
+		</div>
+       		</div>
+		
+		  <div class="popup-right">
+<!--colombo popup-->
+<div class="cright-content" id="crpopup">
+            <h6 class="pophd text-left text-capitalize">
+                <strong>Select a local area within Colombo</strong>
+            </h6>
+            <div class="table-container">
+				<div class="table-row">
+            <h6>Popular areas</h6>
+        		</div>
+        <div class="table-row">
+            <a href="#"><h6>All of Colombo</h6></a>
+            
+        </div><hr>
+        <div class="table-row">
+            <a href="#">
+                <h6>piliyandara</h6>
+            </a>
+            
+        </div><hr>
+        <div class="table-row">
+            <a href="#">
+                <h6>Maharagama</h6>
+            </a>
+            
+        </div><hr>
+				<button type="button" onclick="closeCRightPopup()">close</button>
+    </div>
+		</div>
+<!--kandy popup-->
+<div class="kright-content" id="krpopup">
+            <h6 class="pophd text-left text-capitalize">
+                <strong>Select a local area within Kandy</strong>
+            </h6>
+            <div class="table-container">
+				<div class="table-row">
+            <h6>Popular areas</h6>
+        		</div>
+        <div class="table-row">
+            <a href="#"><h6>All of Kandy</h6></a>
+            
+        </div><hr>
+        <div class="table-row">
+            <a href="#">
+                <h6>Kandy City</h6>
+            </a>
+            
+        </div><hr>
+        <div class="table-row">
+            <a href="#">
+                <h6>Katugasthota</h6>
+            </a>
+            
+        </div><hr>
+				<button type="button" onclick="closeKRightPopup()">close</button>
+    </div>
+		</div>
+		  </div>
+        </div>
+		  </div>
+	  
+	  
+<!--section 2 mid part(occupation)-->	  
+<section class="back img-fluid rounded">
+	<h1 class="col-lg-11 offset-lg-1">Select the occupation</h1>
+<table width="800" border="0" class="back rounded">
+  <tbody>
+    <tr>
+      <td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+      <td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+		<td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+		<td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+      </tr>
+    <tr>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      </tr>
+	  <tr>
+      <td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+      <td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+		<td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+		<td><a href="#"><img src="images/latte.png" class="rounded img-fluid" alt="Placeholder image"></a></td>
+      </tr>
+    <tr>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      <td><a href="#"><h1 class="text-center">latte</h1></a></td>
+      </tr>
+    </tbody>
+</table>
+    </section><br>
+	  
+	  
+<!--footer-->	  
+<footer class="img-fluid rounded footer">
+	<button class="btn btn-primary" type="button" disabled> <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span></button>
+		<h1 class="email col-lg-3 offset-lg-5">footer</h1>
+	</footer>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    
+	  
+  </div>
+  </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.4.1.js"></script>
+/*javascript*/
+<script>
+        let popup = document.getElementById("popup");
+		let rpopup = document.getElementById("crpopup")
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+		function openCRightPopup(){
+			crpopup.classList.add("open-rightpopup");
+		}
+		function closeCRightPopup(){
+			crpopup.classList.remove("open-rightpopup");
+		}
+	function openKRightPopup(){
+			krpopup.classList.add("open-rightpopup");
+		}
+		function closeKRightPopup(){
+			krpopup.classList.remove("open-rightpopup");
+		}
+    </script>
+  
+  </body>
+</html>
